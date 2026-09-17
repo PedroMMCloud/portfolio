@@ -3,7 +3,7 @@
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #12A2BC;
-    --cor-terciaria: #EFBE09;
+    --cor-terciaria: #fee22f;
     --cor-hover: #2c2c2c;
     --cinza-m: #535353;
 
@@ -56,6 +56,10 @@ strong {
     color: var(--cor-secundaria);
     text-decoration: none;
     text-decoration-style: dashed;
+}
+
+.titulo-img{
+    width: 80%;
 }
 
 .secao {
