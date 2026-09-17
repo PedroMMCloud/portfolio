@@ -348,3 +348,69 @@ textarea {
     height: 80px;
     object-fit: contain;
 }
+
+/*  */
+
+.contato-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.subtitulo {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 14px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font: inherit;
+}
+
+.contato-form textarea {
+    resize: vertical;
+}
+
+.contato-form button {
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #111;
+    color: white;
+
+    font: inherit;
+    cursor: pointer;
+}
+
+.contato-form button:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contato-info h2 {
+        font-size: 36px;
+    }
+}

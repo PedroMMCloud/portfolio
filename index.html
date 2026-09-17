@@ -11,7 +11,7 @@
 <body>
     <header class="cabecalho">
         <nav class="navegacao">
-            <a class="navegacao__link" href="#home">Home</a>
+            <a class="navegacao__link" href="#home">Inicio</a>
             <a class="navegacao__link" href="#sobre">Sobre mim</a>
             <a class="navegacao__link" href="#habilidades">Habilidades</a>
             <a class="navegacao__link" href="#projetos">Projetos</a>
@@ -159,8 +159,28 @@
                 <section id="contato" class="secao secao--contato">
                     <div class="contato-conteudo">
                         <h2 class="titulo">Qualquer coisa, manda um oi.</h2>
-                        <p>Entre em contato comigo:</p>
+                        <p>Tem um projeto em mente, uma oportunidade ou 
+                        simplesmente quer trocar uma ideia? Entre em 
+                        contato comigo.
+                        </p>
 
+                            <div>
+                                <form class="contato-form" action="#" method="post">
+
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                                    <label for="mensagem">Mensagem</label>
+                                    <textarea id="mensagem"  name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+
+                                    <button type="submit">Enviar mensagem </button>
+
+                                </form>
+                            </div>
+                            
                             <div class="form-buttons">
                                 <button type="button">
                                     <a target="_blank" href="https://br.linkedin.com/">
@@ -174,10 +194,16 @@
                                 </button>
 
                                 <button type="button">
-                                    <a target="_blank" href="https://github.com/PedroMMCloud">
-                                        <img src="./assets/WhatsApp.png" alt="">
-                                    </a>
+                                    <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.moraes.pm.07@gmail.com">Pedro.moraes.pm.07@gmail.com</a>
                                 </button>
+
+                                <form class="contato-form" action="#" method="post">
+
+                            <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=seuemail@gmail.com"
+                                target="_blank" rel="noopener noreferrer">
+                                Enviar e-mail
+                            </a> -->
+
                             </div>
                         </form>
                     </div>
