@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/scripts.js" defer></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 
                 <p class="texto">
                     Tenho 19 anos, gosto cultura pop, HQs, filmes de 
-                    terror e qualquer coisa de possa lhe dar uma 
+                    terror e qualquer coisa que possa dar uma 
                     crise existencial após assistir.
                     Acredito que jogos podem e são mais do que
                     formas de entretenimento, podendo transmitir
@@ -164,7 +165,7 @@
                         </p>
 
                             <div>
-                                <form class="contato-form" action="#" method="post">
+                                <form class="contato-form" id="contato-form" action="#" method="post">
 
                                     <label for="nome">Nome</label>
                                     <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
@@ -176,13 +177,15 @@
                                     <textarea id="mensagem"  name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
 
                                     <button type="submit">Enviar mensagem</button>
+                                    <p id="mensagem-status"></p>
+
 
                                 </form>
                             </div>
                             
                             <div class="form-buttons">
                                 <button type="button">
-                                    <a target="_blank" href="https://br.linkedin.com/">
+                                    <a target="_blank" href="https://www.linkedin.com/in/pedro-moraes-20ab06425?utm_source=share_via&utm_content=profile&utm_medium=member_android">
                                         <img src="./assets/linkedin.png" alt="">
                                     </a>
                                 </button>
@@ -192,8 +195,8 @@
                                     </a>
                                 </button>
 
-                                <button type="button">
-                                    <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.moraes.pm.07@gmail.com">Pedro.moraes.pm.07@gmail.com</a>
+                                <button type="button" class="email-buttons">
+                                    <a class="email-button" target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.moraes.pm.07@gmail.com">Pedro.moraes.pm.07@gmail.com</a>
                                 </button>
 
                                 <form class="contato-form" action="#" method="post">
