@@ -318,7 +318,7 @@ textarea {
 }
 
 .contato-form input, .contato-form textarea{
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
 }
 
 .form-buttons {
@@ -354,7 +354,6 @@ textarea {
 .contato-container {
     max-width: 1100px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -376,10 +375,8 @@ textarea {
 .contato-form textarea {
     padding: 14px;
     margin-bottom: 15px;
-
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-terciaria);
     border-radius: 6px;
-
     font: inherit;
 }
 
@@ -389,13 +386,10 @@ textarea {
 
 .contato-form button {
     padding: 15px 25px;
-
     border: none;
     border-radius: 6px;
-
-    background: #111;
-    color: white;
-
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
     font: inherit;
     cursor: pointer;
 }
@@ -412,5 +406,63 @@ textarea {
 
     .contato-info h2 {
         font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .galeria {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .foto img {
+        height: auto;
+    }
+
+    .informacoes {
+        padding: 18px;
+    }
+
+    .informacoes h2 {
+        font-size: 1.25rem;
+    }
+
+    .informacoes p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form-buttons {
+        width: 90%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .social-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-button img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .email-button {
+        width: 100%;
+
+        min-height: 50px;
+
+        padding: 10px 15px;
+
+        text-align: center;
+
+        font-size: 0.85rem;
     }
 }
