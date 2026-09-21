@@ -93,6 +93,10 @@ strong {
     line-height: 1.7;
 }
 
+.link-insta {
+    text-decoration: none;
+}
+
 .secao--home {
     min-height: 80vh;
     display: flex;
@@ -117,8 +121,12 @@ strong {
 .secao__imagem img {
     width: 80%;
     max-width: 450px;
-
     border-radius: 10px;
+}
+
+.img-curriculo {
+    width: 95%;
+    padding: 0.548px 0px 0px 0px;
 }
 
 #habilidades {
@@ -296,7 +304,6 @@ strong {
 form {
     display: block;
     unicode-bidi: isolate;
-    
 }
 
 .contato-form input{
@@ -400,6 +407,7 @@ textarea {
 
 .email-button {
     text-decoration: none;
+    color: var(--cor-terciaria);
 }
 
 @media (max-width: 768px) {
@@ -442,9 +450,7 @@ textarea {
 
     .form-buttons {
         width: 90%;
-
         flex-wrap: wrap;
-
         gap: 15px;
     }
 
@@ -460,13 +466,9 @@ textarea {
 
     .email-button {
         width: 100%;
-
         min-height: 50px;
-
         padding: 10px 15px;
-
         text-align: center;
-
         font-size: 0.85rem;
     }
 }
