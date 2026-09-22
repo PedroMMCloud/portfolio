@@ -1,57 +1,57 @@
-let camera 
-let scene 
-let render
-let material
-let mouseX = 0;
-let mouseY = 0;
-let windowHalfX = window.innerWidth / 2;
-let windonHalfY = window.innerHeight / 2;
-
-init()
-animate()
-
-function init () {
-    camera = new THREE.pespectiveCamera(50, window.innerWidth / window.innerHeight, 5, 2000);
-    camera.position.z = 500;
-
-    scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0000ff, 0.001);
-
-    const geometry = new THREE.BufferGeometry();
-    const vertices =[];
-    const size = 2000;
-
-    for (let i = 0; i < 2000; i++) {
-        const x = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-        const y = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-        const z = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-
-        vertices.push(x, y, z);
-    }
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-
-   material = new THREE.PointsMaterial((
-    size: 2,
-    color: 0xffffff,
-   ));
-
-   const particles = new THREE.Points(geometry, material);
-   scene.add(particles);
-
-   renderer = new THREE.WebGLRender();
-   renderer.setPixelRAtio(window.devicePixelRatio);
-   renderer.setSize(window.innerWidth, window.innerHeight);
-   document.body.appendChild(renderer.donElement);
-
-   document.body.style.touchAction = 'none';
-   document.body.addEventListener('pointermove', onpointermove);
-   window.addEventListener('resize', onWindonResize);
+function randon(num){
+    return Math.floor(Math.random() * num);
 }
 
-function onWindonResize() {
-    windowHalfX = window.innerWidth / 2;
-    windonHalfY = window.innerHeight / 2;
+class Canvas {
+    constructor(canvasSelector, canvasColor = '#000', makeFullScreen = true){
+        this.canvas = document.querySelector(canvasSelector);
+        this.canvas.style.background = canvasColor;
+        if (makeFullScreen) {
+            this.makeFullScreen();
+        }
+    }
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    getCtx(dimention = '2D') {
+        return this.canvas.getContext(dimention);
+    }
+
+    getWidth() {
+        return this.canvas.width;
+    }
+
+    getHeigth() {
+        return this.canvas.heigth;
+    }
+
+    clear() {
+        this.getCtx().clearRect(0, 0, this.getWidth(), this.getHeigth())
+    }
+
+    makeFullScreen() {
+        this.canvas.heigth = window.innerHeight;
+        this.canvas.width = window.innerWidth;
+    }
+}
+
+class Animation {
+    constructor(canvas, circleNumber = 120, circles = null){
+        this.canvas = canvas;
+        if (circles === null){
+            circles = [];
+            for(let i = 0; i < circleNumber; i++){
+                circles.push(new circleNumber(this.getCanvas()));
+            }
+        };
+        this.circles = circles;
+        this.render();
+    }
+
+    getCanvas(){
+        return this.canvas;
+    }
+
+    getCircles() {
+        return this.circles;
+    }
     
 }
