@@ -24,7 +24,7 @@ html {
 
 body {
     background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+    margin: 0;
     font-family: var(--fonte-texto);
 }
 
@@ -32,6 +32,25 @@ strong {
     color: var(--cor-terciaria);
 }
 
+#ceu {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.estrela {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: piscar 2s infinite alternate;
+}
+
+@keyframes piscar {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
 
 .cabecalho {
     padding: 5% 10%;
